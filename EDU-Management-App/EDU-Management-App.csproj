@@ -62,4 +62,40 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Models\" />
+      <Folder Include="ViewModels\" />
+      <Folder Include="Views\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Remove="Platforms\Tizen\**" />
+      <MauiXaml Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiCss Remove="Platforms\Tizen\**" />
+      <MauiCss Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Platforms\Tizen\**" />
+      <Compile Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Platforms\Tizen\**" />
+      <EmbeddedResource Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AndroidAarLibrary Remove="Platforms\Tizen\**" />
+      <AndroidAarLibrary Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Platforms\Tizen\**" />
+      <None Remove="Platforms\Windows\**" />
+    </ItemGroup>
+
 </Project>

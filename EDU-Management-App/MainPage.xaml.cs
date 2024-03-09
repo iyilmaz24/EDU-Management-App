@@ -1,23 +1,36 @@
-﻿namespace EDU_Management_App;
+﻿
+
+namespace EDU_Management_App;
 
 public partial class MainPage : ContentPage
 {
     int count = 0;
-
+    int count2 = 0; 
+    
     public MainPage()
     {
         InitializeComponent();
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    private void StudentLoginClicked(object sender, EventArgs e)
     {
         count++;
 
         if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
+            StudentBtn.Text = $"Clicked {count} time";
         else
-            CounterBtn.Text = $"Clicked {count} times";
+            StudentBtn.Text = $"Clicked {count} times";
+        
+    }
+    
+    private void InstructorLoginClicked(object sender, EventArgs e)
+    {
+        count2++;
 
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        if (count2 == 1)
+            InstructorBtn.Text = $"Clicked {count2} time";
+        else
+            InstructorBtn.Text = $"Clicked {count2} times";
+
     }
 }

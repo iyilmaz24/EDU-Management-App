@@ -8,7 +8,7 @@
     Title="EDU_Management_App">
 
     <ShellContent
-        Title="Home"
+        Title="Welcome User!"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
