@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EDU_Management_App.Views.InstructorDashboard">
+    <ContentPage.Content>
+        
+        <Label
+            Text="Instructor Dashboard"
+            FontAutoScalingEnabled="True"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1" />
+        
+    </ContentPage.Content>
+</ContentPage>

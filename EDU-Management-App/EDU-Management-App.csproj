@@ -64,13 +64,14 @@
 
     <ItemGroup>
       <Folder Include="Models\" />
-      <Folder Include="ViewModels\" />
-      <Folder Include="Views\" />
     </ItemGroup>
 
     <ItemGroup>
       <MauiXaml Remove="Platforms\Tizen\**" />
       <MauiXaml Remove="Platforms\Windows\**" />
+      <MauiXaml Update="Views\MainPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
     </ItemGroup>
 
     <ItemGroup>
@@ -81,6 +82,10 @@
     <ItemGroup>
       <Compile Remove="Platforms\Tizen\**" />
       <Compile Remove="Platforms\Windows\**" />
+      <Compile Update="Views\MainPage.xaml.cs">
+        <DependentUpon>MainPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

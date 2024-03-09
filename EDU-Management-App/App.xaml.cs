@@ -1,4 +1,6 @@
-﻿namespace EDU_Management_App;
+﻿using EDU_Management_App.Views;
+
+namespace EDU_Management_App;
 
 public partial class App : Application
 {
@@ -7,5 +9,8 @@ public partial class App : Application
         InitializeComponent();
 
         MainPage = new AppShell();
+        Routing.RegisterRoute("Student", typeof(StudentDashboard));
+        Routing.RegisterRoute("Instructor", typeof(InstructorDashboard));
+        
     }
 }

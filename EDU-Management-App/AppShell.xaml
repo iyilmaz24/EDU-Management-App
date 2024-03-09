@@ -3,7 +3,7 @@
     x:Class="EDU_Management_App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:EDU_Management_App"
+    xmlns:local="clr-namespace:EDU_Management_App.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="EDU_Management_App">
 
@@ -11,5 +11,15 @@
         Title="Welcome User!"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    
+    <ShellContent
+        Title="Instructor View"
+        ContentTemplate="{DataTemplate local:InstructorDashboard}"
+        Route="Instructor" />
+    
+    <ShellContent
+        Title="Student View"
+        ContentTemplate="{DataTemplate local:StudentDashboard}"
+        Route="Student" />
 
 </Shell>

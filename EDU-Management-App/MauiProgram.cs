@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using EDU_Management_App.Views;
+using Microsoft.Extensions.Logging;
 
 namespace EDU_Management_App;
 
@@ -15,6 +16,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
+        builder.Services.AddTransient<StudentDashboard>();
+        builder.Services.AddTransient<InstructorDashboard>();
+            
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
