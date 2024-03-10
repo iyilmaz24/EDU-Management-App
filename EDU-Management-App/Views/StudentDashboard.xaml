@@ -4,12 +4,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EDU_Management_App.Views.StudentDashboard">
     <ContentPage.Content>
-        
-        <Label
-            Text="Student Dashboard"
-            FontAutoScalingEnabled="True"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1" />
-        
+        <VerticalStackLayout
+            Spacing="25">
+            
+            
+            <Label
+                Text="Student Dashboard"
+                FontAutoScalingEnabled="True"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+            <!-- Make an API call to get all the classes for the current Student Id and display them below -->
+            <ListView>
+                <!-- Use ListView + Data Template to display all classes for Student -->
+                <!-- Upon clicking on a class, display the class info page (assignments, modules, etc.) -->
+                <!-- Allow submission of assignments on class info page -->
+            </ListView>
+            
+            <Button
+                x:Name="SignOutBtn"
+                Clicked="SignOutClicked"
+                MaximumWidthRequest="350"
+                SemanticProperties.Hint="Sign Out Button"
+                Text="Sign Out">
+            </Button>
+            
+            
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

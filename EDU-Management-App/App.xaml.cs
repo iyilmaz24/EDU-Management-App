@@ -9,8 +9,12 @@ public partial class App : Application
         InitializeComponent();
 
         MainPage = new AppShell();
+        
+        Routing.RegisterRoute("Home", typeof(MainPage));
         Routing.RegisterRoute("Student", typeof(StudentDashboard));
         Routing.RegisterRoute("Instructor", typeof(InstructorDashboard));
+        
+        Routing.RegisterRoute("StudentLogin", typeof(StudentLoginPage));
         
     }
 }

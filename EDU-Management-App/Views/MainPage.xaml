@@ -40,7 +40,6 @@
                     MaximumWidthRequest="200" 
                     MinimumWidthRequest="150" /> 
                 
-                <!-- x:Name="InstructorBtn" -->
                 <Button
                     x:Name="InstructorBtn"
                     Text="Instructor" 

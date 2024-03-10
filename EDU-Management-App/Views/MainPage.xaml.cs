@@ -10,7 +10,7 @@ public partial class MainPage : ContentPage
     }
     private async void StudentLoginClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("Student", true);
+        await Shell.Current.GoToAsync("StudentLogin");
     }
     
     private async void InstructorLoginClicked(object sender, EventArgs e)

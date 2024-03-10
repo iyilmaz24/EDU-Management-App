@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EDU_Management_App.Views.StudentLoginPage">
+    <ContentPage.Content>
+            <VerticalStackLayout
+                Padding="30,125"
+                Spacing="50"
+                VerticalOptions="Fill">
+            
+                <Image  WidthRequest="275" HeightRequest="200"
+                        Source="maui_logo.jpg"
+                        Aspect="AspectFill"
+                        SemanticProperties.Description="EDU App Logo" />
+
+                <Label
+                    Text="Sign into Student Account"
+                    FontAutoScalingEnabled="True"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
+                
+                <Entry x:Name="UserId"
+                       MaximumWidthRequest="350"
+                       Placeholder="Student ID"/>
+                
+                <Entry x:Name="Password"
+                       MaximumWidthRequest="350"
+                       IsPassword="true"
+                       Placeholder="Password"/>
+            
+                <HorizontalStackLayout 
+                    HorizontalOptions="Center"
+                    Spacing="75">
+                    
+                    <Button
+                        x:Name="ForgotStudPass"
+                        Text="Forgot Password" 
+                        SemanticProperties.Hint="Forgot Password"
+                        Clicked="ForgotStudPassClicked"
+                        HorizontalOptions="Center"
+                        MaximumWidthRequest="200" 
+                        MinimumWidthRequest="150" /> 
+                
+                    <Button
+                        x:Name="StudLoginBtn"
+                        Text="Log In" 
+                        SemanticProperties.Hint="Student Login Button"
+                        Clicked="StudLoginClicked"
+                        HorizontalOptions="Center"
+                        Width="200" 
+                        MinimumWidthRequest="150"/>
+                
+                </HorizontalStackLayout>
+            
+
+
+            </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

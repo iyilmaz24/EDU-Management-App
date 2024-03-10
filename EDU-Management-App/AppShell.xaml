@@ -10,7 +10,7 @@
     <ShellContent
         Title="Welcome User!"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="Home" />
     
     <ShellContent
         Title="Instructor View"
@@ -21,5 +21,10 @@
         Title="Student View"
         ContentTemplate="{DataTemplate local:StudentDashboard}"
         Route="Student" />
+    
+    <ShellContent
+        Title="Student Login"
+        ContentTemplate="{DataTemplate local:StudentLoginPage}"
+        Route="StudentLogin" />
 
 </Shell>
