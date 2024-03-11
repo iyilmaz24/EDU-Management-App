@@ -4,12 +4,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EDU_Management_App.Views.InstructorDashboard">
     <ContentPage.Content>
-        
-        <Label
-            Text="Instructor Dashboard"
-            FontAutoScalingEnabled="True"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1" />
-        
+        <VerticalStackLayout
+            Padding="30, 50"
+            Spacing="35">
+            
+            <FlexLayout
+                WidthRequest="1000"
+                JustifyContent="SpaceBetween"
+                >
+                <Label FlexLayout.AlignSelf="End"
+                    Text="Instructor Dashboard"
+                    FontAutoScalingEnabled="True"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
+                <Button
+                    x:Name="SignOutBtn"
+                    Clicked="SignOutClicked"
+                    MaximumWidthRequest="350"
+                    SemanticProperties.Hint="Sign Out Button"
+                    Text="Sign Out">
+                </Button>          
+            </FlexLayout>
+
+            
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

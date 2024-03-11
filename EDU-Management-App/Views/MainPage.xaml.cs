@@ -15,6 +15,6 @@ public partial class MainPage : ContentPage
     
     private async void InstructorLoginClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("Instructor");
+        await Shell.Current.GoToAsync("InstructorLogin");
     }
 }

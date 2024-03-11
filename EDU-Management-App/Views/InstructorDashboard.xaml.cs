@@ -12,4 +12,9 @@ public partial class InstructorDashboard : ContentPage
     {
         InitializeComponent();
     }
+    private async void SignOutClicked(object sender, EventArgs e)
+    {
+        await Navigation.PopToRootAsync();
+    }
+    
 }

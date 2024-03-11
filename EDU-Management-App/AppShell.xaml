@@ -26,5 +26,10 @@
         Title="Student Login"
         ContentTemplate="{DataTemplate local:StudentLoginPage}"
         Route="StudentLogin" />
+    
+    <ShellContent
+        Title="Instructor Login"
+        ContentTemplate="{DataTemplate local:InstructorLoginPage}"
+        Route="InstructorLogin" />
 
 </Shell>
