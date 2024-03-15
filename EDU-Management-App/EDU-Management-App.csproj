@@ -110,4 +110,8 @@
       <None Remove="Platforms\Windows\**" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EDU-App-Library\EDU-App-Library.csproj" />
+    </ItemGroup>
+
 </Project>
