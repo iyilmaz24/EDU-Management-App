@@ -4,9 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EDU_Management_App.Views.StudentDashboard">
     <ContentPage.Content>
+        
         <VerticalStackLayout
             Spacing="25">
-            
             
             <Label
                 Text="Student Dashboard"

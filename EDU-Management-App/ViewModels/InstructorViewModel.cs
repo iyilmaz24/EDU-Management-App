@@ -1,34 +1,50 @@
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 namespace EDU_Management_App.ViewModels;
 
 using EDU_App_Library.Services;
 using EDU_App_Library.Models;
-public class InstructorViewModel
+public class InstructorViewModel : INotifyPropertyChanged
 {
-    private CourseService courseService;
-    private StudentService studentService;
-    public InstructorViewModel(string UserId)
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
     {
-        courseService = CourseService.Current;
-        studentService = StudentService.Current;
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public ObservableCollection<Student> StudentsList
+    {
+        get => new ObservableCollection<Student>(StudentService.Current.students); 
+    }
+    
+    public InstructorViewModel()
+    {
+        AddStudent("John Smith", "2nd Year");
+        AddStudent("Ana Jones", "4th Year");
+        AddStudent("Michael Yellow", "3rd Year");
     }
 
     // adds new student to general roster of students
     public void AddStudent(string name, string classI) {
         Student newStu = new Student(name, classI);
-        studentService.AddStudent(newStu);
+        StudentService.Current.AddStudent(newStu);
+        NotifyPropertyChanged(nameof(StudentsList));
     }
 
     // enrolls existing student to a specific course
     public void EnrollStudent(Student student, Course course)
     {
-        courseService.AddStudent(student, course);
+        CourseService.Current.AddStudent(student, course);
     }
     
     // return the entire general roster of students
-    public IList<Student> GetAllStudents()
+    public ObservableCollection<Student> GetAllStudents()
     {
-        return studentService.students;
+        return new ObservableCollection<Student>(StudentService.Current.students);
     }
-    
+
 }
 
