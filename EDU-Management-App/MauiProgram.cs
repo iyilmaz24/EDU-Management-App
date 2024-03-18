@@ -19,6 +19,7 @@ public static class MauiProgram
         builder.Services.AddTransient<MainPage>();
         builder.Services.AddTransient<StudentDashboard>();
         builder.Services.AddTransient<InstructorDashboard>();
+        builder.Services.AddTransient<ListViewInstructor>();
             
 #if DEBUG
         builder.Logging.AddDebug();

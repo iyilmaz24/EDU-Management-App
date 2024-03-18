@@ -28,11 +28,6 @@
                     Text="Sign Out">
                 </Button>
             </FlexLayout>
-                            
-            <ListView BackgroundColor="DarkGray" SeparatorColor="Black" MaximumWidthRequest="600"
-                      MaximumHeightRequest="350"
-                      ItemsSource="{Binding StudentsList}">
-            </ListView>
             
             <FlexLayout
                 WidthRequest="1000"
@@ -75,11 +70,11 @@
                     Text="Selection 5">
                 </Button>
                 <Button
-                    Clicked="SignOutClicked"
+                    Clicked="ViewCoursesClicked"
                     MinimumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Sign Out Button"
-                    Text="Selection 6">
+                    SemanticProperties.Hint="View Courses"
+                    Text="View All Courses">
                 </Button>
             </FlexLayout>
             

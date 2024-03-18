@@ -31,5 +31,10 @@
         Title="Instructor Login"
         ContentTemplate="{DataTemplate local:InstructorLoginPage}"
         Route="InstructorLogin" />
+    
+    <ShellContent
+        Title="Instructor List View"
+        ContentTemplate="{DataTemplate local:ListViewInstructor}"
+        Route="ListViewI" />
 
 </Shell>

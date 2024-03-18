@@ -19,5 +19,10 @@ public partial class InstructorDashboard : ContentPage
     {
         await Navigation.PopToRootAsync();
     }
+
+    private async void ViewCoursesClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("ListViewI");
+    }
     
 }
