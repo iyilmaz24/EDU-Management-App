@@ -6,11 +6,21 @@
              x:DataType="viewModels:InstructorViewModel"
              x:Class="EDU_Management_App.Views.ListViewInstructor">
     <ContentPage.Content>
-        
+        <VerticalStackLayout>
+            
         <ListView BackgroundColor="DarkGray" SeparatorColor="Black" MaximumWidthRequest="600"
                   MaximumHeightRequest="350"
-                  ItemsSource="{Binding StudentsList}">
+                  ItemsSource="{Binding StudentsList}"
+                  SelectedItem="{Binding SelectedPerson}">
         </ListView>
         
+        <FlexLayout WidthRequest="450" JustifyContent="SpaceBetween">
+            <Entry MinimumWidthRequest="175" BindingContext="{Binding}"></Entry> 
+            <Entry MinimumWidthRequest="175" BindingContext="{Binding}"></Entry> 
+            <Button MinimumWidthRequest="75" Text="Add" BindingContext="{Binding}"></Button>
+        </FlexLayout>
+            
+            
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
