@@ -14,11 +14,14 @@
                   SelectedItem="{Binding SelectedPerson}">
         </ListView>
         
+        
         <FlexLayout WidthRequest="450" JustifyContent="SpaceBetween">
-            <Entry MinimumWidthRequest="175" BindingContext="{Binding}"></Entry> 
-            <Entry MinimumWidthRequest="175" BindingContext="{Binding}"></Entry> 
-            <Button MinimumWidthRequest="75" Text="Add" BindingContext="{Binding}"></Button>
+            <Entry MinimumWidthRequest="175" Text="{Binding Name}"></Entry> 
+            <Entry MinimumWidthRequest="175" Text="{Binding Class}"></Entry> 
+            <Button MinimumWidthRequest="75" Text="Add" Clicked="AddClicked"></Button>
         </FlexLayout>
+            
+        <Button MinimumWidthRequest="300" MaximumWidthRequest="350" Text="Previous Page" Clicked="CancelClicked"></Button>
             
             
         </VerticalStackLayout>

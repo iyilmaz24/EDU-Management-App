@@ -14,4 +14,14 @@ public partial class ListViewInstructor : ContentPage
         InitializeComponent();
         BindingContext = new InstructorViewModel();
     }
+
+    public void AddClicked(object sender, EventArgs e)
+    {
+        (BindingContext as InstructorViewModel)?.AddStudent();
+    }
+    
+    public async void CancelClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("Instructor");
+    }
 }
