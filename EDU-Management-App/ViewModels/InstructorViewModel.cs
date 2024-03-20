@@ -44,9 +44,17 @@ public class InstructorViewModel : INotifyPropertyChanged
     // adds new student to general roster of students
     public void AddStudent()
     {
-        if (student is not { Name: not null, Class: not null }) return;
+        if (student is not { Name: not null or "", Class: not null or "" }) return;
         
         StudentService.Current.AddStudent(new Student(student.Name, student.Class));
+        NotifyPropertyChanged(nameof(StudentsList));
+    }
+    
+    public void DeleteStudent()
+    {
+        if (SelectedPerson is null) return;
+        
+        StudentService.Current.DeleteStudent(SelectedPerson);
         NotifyPropertyChanged(nameof(StudentsList));
     }
 
@@ -61,6 +69,12 @@ public class InstructorViewModel : INotifyPropertyChanged
     // {
     //     return new ObservableCollection<Student>(StudentService.Current.students);
     // }
+
+
+    public void Refresh()
+    {
+        NotifyPropertyChanged(nameof(StudentsList));
+    }
 
 }
 

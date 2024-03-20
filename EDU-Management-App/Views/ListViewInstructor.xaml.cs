@@ -19,7 +19,11 @@ public partial class ListViewInstructor : ContentPage
     {
         (BindingContext as InstructorViewModel)?.AddStudent();
     }
-    
+    public void DeleteClicked(object sender, EventArgs e)
+    {
+        (BindingContext as InstructorViewModel)?.DeleteStudent();
+    }
+
     public async void CancelClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("Instructor");

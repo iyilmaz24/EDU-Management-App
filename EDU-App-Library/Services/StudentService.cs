@@ -45,6 +45,9 @@ namespace EDU_App_Library.Services
         public void AddStudent(Student student) {
             students.Add(student);
         }
+        public void DeleteStudent(Student student) {
+            students.Remove(student);
+        }
 
         public Student SelectStudent() {
             
