@@ -25,4 +25,9 @@ public partial class InstructorDashboard : ContentPage
         await Shell.Current.GoToAsync("ListViewI");
     }
     
+    public async void EditCourseClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("InstructorEditCourse");
+    }
+    
 }

@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:EDU_Management_App.ViewModels"
              x:DataType="viewModels:InstructorViewModel"
-             x:Class="EDU_Management_App.Views.InstructorDashboard">
+             x:Class="EDU_Management_App.Views.InstructorEditCourse">
     <ContentPage.Content>
         
         <VerticalStackLayout
@@ -21,10 +21,10 @@
                     Style="{StaticResource Headline}"
                     SemanticProperties.HeadingLevel="Level1" />
                 <Button
-                    Clicked="SignOutClicked"
-                    MaximumWidthRequest="350"
-                    SemanticProperties.Hint="Sign Out Button"
-                    Text="Sign Out">
+                    Clicked="PreviousPageClicked"
+                    MinimumWidthRequest="225"
+                    SemanticProperties.Hint="Previous Page"
+                    Text="Previous Page">
                 </Button>
             </FlexLayout>
             
@@ -35,28 +35,48 @@
                 Wrap="Wrap"
                 MaximumHeightRequest="300" >
                 <Button
-                    Clicked="SignOutClicked"
+                    Clicked="AddStudentClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Create New Student"
-                    Text="Create New Student">
+                    SemanticProperties.Hint="Add Student"
+                    Text="Add Student">
                 </Button>
                 <Button
-                    Clicked="SignOutClicked"
+                    Clicked="AddStudentClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Create New Course"
-                    Text="Create New Course">
+                    SemanticProperties.Hint="Add Module"
+                    Text="Add Module">
                 </Button>
                 <Button
-                    Clicked="EditCourseClicked"
+                    Clicked="AddStudentClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Edit Existing Course"
-                    Text="Edit Existing Course">
+                    SemanticProperties.Hint="Add Assignment"
+                    Text="Add Assignment">
                 </Button>
+                <Button
+                    Clicked="AddStudentClicked"
+                    MaximumWidthRequest="350"
+                    MaximumHeightRequest="50"
+                    SemanticProperties.Hint="Assign Grades"
+                    Text="Assign Grades">
+                </Button>
+                <Button
+                    Clicked="AddStudentClicked"
+                    MaximumWidthRequest="350"
+                    MaximumHeightRequest="50"
+                    SemanticProperties.Hint="View Course Content"
+                    Text="Detailed Course Content">
+                </Button>
+                <!-- <Button -->
+                <!--     Clicked="PreviousPageClicked" -->
+                <!--     MinimumWidthRequest="350" -->
+                <!--     MaximumHeightRequest="50" -->
+                <!--     SemanticProperties.Hint="View Courses" -->
+                <!--     Text="View All Courses"> -->
+                <!-- </Button> -->
             </FlexLayout>
-            
             
         </VerticalStackLayout>
     </ContentPage.Content>

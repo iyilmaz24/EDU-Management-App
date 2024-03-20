@@ -18,5 +18,6 @@ public partial class App : Application
         Routing.RegisterRoute("InstructorLogin", typeof(InstructorLoginPage));
         
         Routing.RegisterRoute("ListViewI", typeof(ListViewInstructor));
+        Routing.RegisterRoute("InstructorEditCourse", typeof(InstructorEditCourse));
     }
 }
