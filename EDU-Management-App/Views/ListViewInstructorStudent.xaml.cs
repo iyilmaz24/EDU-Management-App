@@ -7,9 +7,9 @@ using EDU_Management_App.ViewModels;
 
 namespace EDU_Management_App.Views;
 
-public partial class ListViewInstructor : ContentPage
+public partial class ListViewInstructorStudent : ContentPage
 {
-    public ListViewInstructor()
+    public ListViewInstructorStudent()
     {
         InitializeComponent();
         BindingContext = new InstructorViewModel();

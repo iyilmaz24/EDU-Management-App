@@ -19,14 +19,10 @@ public partial class InstructorDashboard : ContentPage
     {
         await Navigation.PopToRootAsync();
     }
-
-    private async void ViewCoursesClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("ListViewI");
-    }
+    
     public async void ManageStudentsClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("ListViewI");
+        await Shell.Current.GoToAsync("ListViewInstructorStudent");
     }
     public async void EditCourseClicked(object sender, EventArgs e)
     {
