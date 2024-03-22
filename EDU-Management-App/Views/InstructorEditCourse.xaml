@@ -69,13 +69,13 @@
                     SemanticProperties.Hint="View Course Content"
                     Text="Detailed Course Content">
                 </Button>
-                <!-- <Button -->
-                <!--     Clicked="PreviousPageClicked" -->
-                <!--     MinimumWidthRequest="350" -->
-                <!--     MaximumHeightRequest="50" -->
-                <!--     SemanticProperties.Hint="View Courses" -->
-                <!--     Text="View All Courses"> -->
-                <!-- </Button> -->
+                <Button
+                    Clicked="PreviousPageClicked"
+                    MinimumWidthRequest="350"
+                    MaximumHeightRequest="50"
+                    SemanticProperties.Hint="Delete This Course"
+                    Text="Delete This Course">
+                </Button>
             </FlexLayout>
             
         </VerticalStackLayout>

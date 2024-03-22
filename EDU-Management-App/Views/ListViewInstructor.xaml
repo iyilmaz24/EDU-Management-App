@@ -6,22 +6,53 @@
              x:DataType="viewModels:InstructorViewModel"
              x:Class="EDU_Management_App.Views.ListViewInstructor">
     <ContentPage.Content>
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="100">
             
-        <ListView BackgroundColor="DarkGray" SeparatorColor="Black" MaximumWidthRequest="600"
-                  MaximumHeightRequest="350"
-                  ItemsSource="{Binding StudentsList}"
-                  SelectedItem="{Binding SelectedPerson}">
-        </ListView>
+            <Grid MaximumWidthRequest="1000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <ListView BackgroundColor="Black" SeparatorColor="WhiteSmoke" MinimumWidthRequest="500" 
+                          MinimumHeightRequest="350" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                          ItemsSource="{Binding StudentsList}"
+                          SelectedItem="{Binding SelectedPerson}">
+                </ListView>  
+                
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="250" Text="{Binding Name}" 
+                       Grid.Row="1" Grid.Column="0" ></Entry> 
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="250" Text="{Binding Class}"
+                       Grid.Row="1" Grid.Column="1" ></Entry> 
+                
+                <FlexLayout WidthRequest="400" JustifyContent="SpaceEvenly"
+                            Grid.Row="1" Grid.Column="2">
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="110" MaximumWidthRequest="140" Text="Add" Clicked="AddClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="110" MaximumWidthRequest="140" Text="Delete" Clicked="DeleteClicked"></Button>
+                </FlexLayout>
+                
+                <Label Text="Name (Full Name)" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="2" Grid.Column="0" />
+                <Label Text="Class (Fr, So, Jr, Sr)" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="2" Grid.Column="1" />
+                
+                <Button MinimumWidthRequest="200" MaximumWidthRequest="250" MaximumHeightRequest="50" 
+                        Text="Cancel" Clicked="CancelClicked"
+                        Grid.Row="3" Grid.Column="1"></Button>
+                
+            </Grid>
+
             
-        <FlexLayout WidthRequest="450" JustifyContent="SpaceBetween">
-            <Entry MinimumWidthRequest="175" Text="{Binding Name}"></Entry> 
-            <Entry MinimumWidthRequest="175" Text="{Binding Class}"></Entry> 
-            <Button MinimumWidthRequest="100" Text="Add" Clicked="AddClicked"></Button>
-            <Button MinimumWidthRequest="100" Text="Delete" Clicked="DeleteClicked"></Button>
-        </FlexLayout>
+
             
-        <Button MinimumWidthRequest="200" MaximumWidthRequest="250" Text="Cancel" Clicked="CancelClicked"></Button>
+
             
             
         </VerticalStackLayout>

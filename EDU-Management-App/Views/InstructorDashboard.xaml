@@ -35,14 +35,21 @@
                 Wrap="Wrap"
                 MaximumHeightRequest="300" >
                 <Button
-                    Clicked="SignOutClicked"
+                    Clicked="CreateNewStudentClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
                     SemanticProperties.Hint="Create New Student"
                     Text="Create New Student">
                 </Button>
                 <Button
-                    Clicked="SignOutClicked"
+                    Clicked="EditStudentClicked"
+                    MaximumWidthRequest="350"
+                    MaximumHeightRequest="50"
+                    SemanticProperties.Hint="Update or Delete Student"
+                    Text="Update or Delete Student">
+                </Button>
+                <Button
+                    Clicked="CreateNewCourseClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
                     SemanticProperties.Hint="Create New Course"
@@ -52,8 +59,8 @@
                     Clicked="EditCourseClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Edit Existing Course"
-                    Text="Edit Existing Course">
+                    SemanticProperties.Hint="Update or Delete Course"
+                    Text="Update or Delete Course">
                 </Button>
             </FlexLayout>
             
