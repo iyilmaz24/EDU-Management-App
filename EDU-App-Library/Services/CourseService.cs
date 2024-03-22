@@ -2,9 +2,9 @@ using EDU_App_Library.Models;
 
 namespace EDU_App_Library.Services {
     public class CourseService {
-        private IList<Course> courses;
         private static object threadLock = new();
         private static CourseService? instance;
+        public IList<Course> courses;
         public static CourseService Current {
             get {
                 lock(threadLock) {               
@@ -38,10 +38,33 @@ namespace EDU_App_Library.Services {
                 }
             Console.WriteLine("=====//============//======");
         }
-        public void Add(Course newCourse) {
+        public void AddCourse(Course newCourse) {
             courses.Add(newCourse);
         }
+        public void DeleteCourse(Course oldCourse) {
+            courses.Remove(oldCourse);
+        }
 
+        public void UpdateCourse(Course oldCourse, String name, String code, String description)
+        {
+            List<Course> searchResults = Search(oldCourse.Code);
+            if(searchResults.Count() != 0)
+            {
+                if (name != " " && name != "")
+                {
+                    searchResults[0].Name = name;
+                }
+                if (code != " " && code != "")
+                {
+                    searchResults[0].Code = code;
+                }
+                if (description != " " && description != "")
+                {
+                    searchResults[0].Description = description;
+                }
+            }
+        }
+        
         public Course SelectCourse() {
 
             int count = 0;

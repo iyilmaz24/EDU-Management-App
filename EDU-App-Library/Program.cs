@@ -35,7 +35,7 @@ namespace EDU_App_Library {
             Console.WriteLine("===//==================//===");
             Course newCourse;
             newCourse = new Course{Name = name??"EmptyName", Code = code??"EmptyCode", Description = description??"EmptyDescription"};
-            CourseService.Current.Add(newCourse);
+            CourseService.Current.AddCourse(newCourse);
         }
 
         static void PrintCourses() {

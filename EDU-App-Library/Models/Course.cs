@@ -6,6 +6,15 @@ namespace EDU_App_Library.Models {
             assignments = new List<Assignment>();
             modules = new List<Module>();
         }
+        public Course(String name, String code, String description) {
+            roster = new List<Person>();
+            assignments = new List<Assignment>();
+            modules = new List<Module>();
+
+            Name = name;
+            Code = code;
+            Description = description;
+        }
         IList<Person> roster;
         IList<Assignment> assignments;
         IList<Module> modules;
