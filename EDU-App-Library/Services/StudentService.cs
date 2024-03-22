@@ -48,6 +48,21 @@ namespace EDU_App_Library.Services
         public void DeleteStudent(Student student) {
             students.Remove(student);
         }
+        public void UpdateStudent(Student student, String newName, String newClass)
+        {
+            List<Student> searchResults = Search(student.Name);
+            if(searchResults.Count() != 0)
+            {
+                if (newName != " " && newName != "")
+                {
+                    searchResults[0].Name = newName;
+                }
+                if (newClass != " " && newClass != "")
+                {
+                    searchResults[0].Class = newClass;
+                }
+            }
+        }
 
         public Student SelectStudent() {
             

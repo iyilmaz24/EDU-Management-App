@@ -21,11 +21,12 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
                 
-                <ListView BackgroundColor="#212121" SeparatorColor="Black" MaximumWidthRequest="750" 
-                          MinimumHeightRequest="350" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                <ListView BackgroundColor="#212121" SeparatorVisibility="Default" SeparatorColor="Silver" 
+                          MaximumWidthRequest="750" MinimumHeightRequest="350" 
+                          Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                           ItemsSource="{Binding StudentsList}"
                           SelectedItem="{Binding SelectedPerson}">
-                    
+                        
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell Height="60">

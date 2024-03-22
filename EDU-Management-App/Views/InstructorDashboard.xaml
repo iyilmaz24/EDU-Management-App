@@ -36,25 +36,18 @@
                 Wrap="Wrap"
                 MaximumHeightRequest="300" >
                 <Button
-                    Clicked="CreateNewStudentClicked"
+                    Clicked="ManageStudentsClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Create New Student"
-                    Text="Create New Student">
+                    SemanticProperties.Hint="Manage Students"
+                    Text="Manage Students">
                 </Button>
                 <Button
-                    Clicked="EditStudentClicked"
+                    Clicked="ManageCoursesClicked"
                     MaximumWidthRequest="350"
                     MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Update or Delete Student"
-                    Text="Update or Delete Student">
-                </Button>
-                <Button
-                    Clicked="CreateNewCourseClicked"
-                    MaximumWidthRequest="350"
-                    MaximumHeightRequest="50"
-                    SemanticProperties.Hint="Create New Course"
-                    Text="Create New Course">
+                    SemanticProperties.Hint="Manage Courses"
+                    Text="Manage Courses">
                 </Button>
                 <Button
                     Clicked="EditCourseClicked"

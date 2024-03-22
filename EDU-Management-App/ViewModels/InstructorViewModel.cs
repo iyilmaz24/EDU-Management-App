@@ -15,7 +15,7 @@ public class InstructorViewModel : INotifyPropertyChanged
     }
 
     public Student? SelectedPerson { get; set; }
-    private Student? student = new Student("", "");
+    private Student? student = new Student(" ", " ");
     public Student? Student => student;
     public string Name
     {
@@ -36,15 +36,16 @@ public class InstructorViewModel : INotifyPropertyChanged
     
     public InstructorViewModel()
     {
-        // AddStudent("John Smith", "2nd Year");
-        // AddStudent("Ana Jones", "4th Year");
-        // AddStudent("Michael Yellow", "3rd Year");
+        ;
     }
 
     // adds new student to general roster of students
     public void AddStudent()
     {
-        if (student is not { Name: not null or "", Class: not null or "" }) return;
+        if (student?.Name == null || student.Name == " " || student.Name == "")
+        { return; };
+        if (student?.Class == null || student.Class == " " || student.Name == "")
+        { return; };
         
         StudentService.Current.AddStudent(new Student(student.Name, student.Class));
         NotifyPropertyChanged(nameof(StudentsList));
@@ -61,8 +62,10 @@ public class InstructorViewModel : INotifyPropertyChanged
     public void UpdateStudent()
     {
         if (SelectedPerson is null) return;
+        if (student?.Name == null) return;
+        if (student?.Class == null) return;
         
-        StudentService.Current.DeleteStudent(SelectedPerson);
+        StudentService.Current.UpdateStudent(SelectedPerson, student.Name, student.Class);
         NotifyPropertyChanged(nameof(StudentsList));
     }
 

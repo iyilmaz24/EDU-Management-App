@@ -25,7 +25,7 @@ public partial class ListViewInstructor : ContentPage
     }
     public async void UpdateClicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("InstructorUpdateStudent");
+        (BindingContext as InstructorViewModel)?.UpdateStudent();
     }
 
     public async void CancelClicked(object sender, EventArgs e)

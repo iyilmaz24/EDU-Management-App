@@ -24,13 +24,7 @@ public partial class InstructorDashboard : ContentPage
     {
         await Shell.Current.GoToAsync("ListViewI");
     }
-    
-
-    public async void EditStudentClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("InstructorEditCourse");
-    }
-    public async void CreateNewStudentClicked(object sender, EventArgs e)
+    public async void ManageStudentsClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("ListViewI");
     }
@@ -38,7 +32,7 @@ public partial class InstructorDashboard : ContentPage
     {
         await Shell.Current.GoToAsync("InstructorEditCourse");
     }
-    public async void CreateNewCourseClicked(object sender, EventArgs e)
+    public async void ManageCoursesClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("ListViewI");
     }
