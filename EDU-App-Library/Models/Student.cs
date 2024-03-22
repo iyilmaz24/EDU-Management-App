@@ -9,13 +9,13 @@ namespace EDU_App_Library.Models {
         IList<Course> courses;
         private string? _class;
         public string Class {
-            get { return _class ?? "EMPTY"; }
+            get { return _class ?? ""; }
             set { _class = value?.ToUpper(); }
         }
 
         private string? _name;
         public string Name {
-            get { return _name ?? "EMPTY"; }
+            get { return _name ?? ""; }
             set { _name = value; }
         }
 

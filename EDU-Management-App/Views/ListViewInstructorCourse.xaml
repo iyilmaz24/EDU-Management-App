@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EDU_Management_App.ViewModels"
+             x:DataType="viewModels:CourseViewModel"
+             x:Class="EDU_Management_App.Views.ListViewInstructorCourse">
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="100" VerticalOptions="Center">
+            
+            <Grid MaximumWidthRequest="1000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                
+                <ListView BackgroundColor="#212121" SeparatorVisibility="Default" SeparatorColor="Silver" 
+                          MaximumWidthRequest="800" MinimumHeightRequest="350" 
+                          Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                          ItemsSource="{Binding CoursesList}"
+                          SelectedItem="{Binding SelectedCourse}">
+                        
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Height="60">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Label TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Column="0"
+                                               Text="{Binding Name}" VerticalTextAlignment="Center"></Label>
+                                        <Label TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Column="1"
+                                               Text="{Binding Code}" VerticalTextAlignment="Center"></Label>
+                                        <Label TextColor="White" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Column="2"
+                                               Text="{Binding Description}" VerticalTextAlignment="Center"></Label>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                </ListView>  
+                
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="150" Text="{Binding Name}" 
+                       Grid.Row="1" Grid.Column="0" ></Entry> 
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="150" Text="{Binding Code}"
+                       Grid.Row="1" Grid.Column="1" ></Entry> 
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="225" Text="{Binding Description}"
+                       Grid.Row="1" Grid.Column="2" ></Entry> 
+                
+                <FlexLayout WidthRequest="400" JustifyContent="SpaceEvenly"
+                            Grid.Row="1" Grid.Column="3">
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Add" Clicked="AddClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Update" Clicked="UpdateClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Delete" Clicked="DeleteClicked"></Button>
+                </FlexLayout>
+                
+                <Label Text="Course Name" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="2" Grid.Column="0" />
+                <Label Text="Course Code" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="2" Grid.Column="1" />
+                <Label Text="Description" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="2" Grid.Column="2" />
+                
+                <Button MinimumWidthRequest="200" MaximumWidthRequest="250" MaximumHeightRequest="50" 
+                        Text="Cancel" Clicked="CancelClicked"
+                        Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"></Button>
+                
+            </Grid>
+
+            
+            
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

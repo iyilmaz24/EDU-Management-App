@@ -7,13 +7,13 @@ namespace EDU_App_Library.Models{
 
         private string? _name;
         public string? Name {
-            get { return _name ?? "EMPTY";}
+            get { return _name ?? "";}
             set { _name = value; }
         }
     
         private string? _description;
         public string? Description {
-            get { return _description ?? "EMPTY"; }
+            get { return _description ?? ""; }
             set { _description = value; }
         }
         
@@ -25,7 +25,7 @@ namespace EDU_App_Library.Models{
         
         private string? _dueDate;
         public string? DueDate {
-            get { return _dueDate ?? "EMPTY"; }
+            get { return _dueDate ?? ""; }
             set { _dueDate = value; }
         }
         public override string ToString()

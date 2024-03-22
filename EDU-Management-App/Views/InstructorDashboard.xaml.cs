@@ -24,14 +24,12 @@ public partial class InstructorDashboard : ContentPage
     {
         await Shell.Current.GoToAsync("ListViewInstructorStudent");
     }
+    public async void ManageCoursesClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("ListViewInstructorCourse");
+    }
     public async void EditCourseClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("InstructorEditCourse");
     }
-    public async void ManageCoursesClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("ListViewI");
-    }
-
-    
 }

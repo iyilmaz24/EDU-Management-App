@@ -20,12 +20,12 @@ namespace EDU_App_Library.Models {
         IList<Module> modules;
         protected string? _name;
         public string Name{
-            get { return _name ?? "EMPTY";}
+            get { return _name ?? "";}
             set { _name = value.ToUpper(); }  
         }
         protected string? _code;
         public string Code{
-            get { return _code ?? "EMPTY"; }
+            get { return _code ?? ""; }
             set { _code = value.ToUpper();}  
         }
         protected string? _description;
