@@ -9,17 +9,18 @@
         
         <VerticalStackLayout
             Padding="30, 50"
-            Spacing="35">
+            Spacing="35" >
             
             <FlexLayout
                 WidthRequest="1000"
                 JustifyContent="SpaceBetween"
-                >
+                Margin="0, 0, 0, 150">
+                
                 <Label FlexLayout.AlignSelf="End"
-                    Text="Instructor Dashboard"
-                    FontAutoScalingEnabled="True"
-                    Style="{StaticResource Headline}"
-                    SemanticProperties.HeadingLevel="Level1" />
+                       Text="Instructor Dashboard"
+                       FontAutoScalingEnabled="True"
+                       Style="{StaticResource Headline}"
+                       SemanticProperties.HeadingLevel="Level1" />
                 <Button
                     Clicked="SignOutClicked"
                     MaximumWidthRequest="350"

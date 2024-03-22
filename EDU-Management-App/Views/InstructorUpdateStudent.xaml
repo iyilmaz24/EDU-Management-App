@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EDU_Management_App.Views.InstructorUpdateStudent"             
+             xmlns:viewModels="clr-namespace:EDU_Management_App.ViewModels"
+             x:DataType="viewModels:InstructorViewModel">
+    
+    <ContentPage.Content>
+                <VerticalStackLayout Padding="200">
+            
+            <Grid MaximumWidthRequest="700">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="200" 
+                       Text="{Binding Name}" Placeholder="{Binding Name}"
+                       Grid.Row="0" Grid.Column="0" ></Entry> 
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="200" 
+                       Text="{Binding Class}" Placeholder="{Binding Class}"
+                       Grid.Row="0" Grid.Column="1" ></Entry> 
+                
+                <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" 
+                        Text="Update" Clicked="UpdateClicked" Grid.Row="0" Grid.Column="2"></Button>
+                
+                <Label Text="Name (Full Name)" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="1" Grid.Column="0" />
+                <Label Text="Class (Fr, So, Jr, Sr)" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                       Grid.Row="1" Grid.Column="1" />
+                
+                <Button MinimumWidthRequest="150" MaximumWidthRequest="200" MaximumHeightRequest="50"
+                        Text="Cancel" Clicked="CancelClicked"
+                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"></Button>
+                
+            </Grid>
+
+            
+            
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

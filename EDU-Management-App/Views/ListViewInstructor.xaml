@@ -6,7 +6,7 @@
              x:DataType="viewModels:InstructorViewModel"
              x:Class="EDU_Management_App.Views.ListViewInstructor">
     <ContentPage.Content>
-        <VerticalStackLayout Padding="100">
+        <VerticalStackLayout Padding="100" VerticalOptions="Center">
             
             <Grid MaximumWidthRequest="1000">
                 <Grid.RowDefinitions>
@@ -18,10 +18,10 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
                 
-                <ListView BackgroundColor="DimGrey" SeparatorColor="Black" MaximumWidthRequest="750" 
+                <ListView BackgroundColor="#212121" SeparatorColor="Black" MaximumWidthRequest="750" 
                           MinimumHeightRequest="350" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                           ItemsSource="{Binding StudentsList}"
                           SelectedItem="{Binding SelectedPerson}">
@@ -34,34 +34,35 @@
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="2*" />
-                                            <ColumnDefinition Width="2*" />
                                             <ColumnDefinition Width="1*" />
                                             <ColumnDefinition Width="1*" />
+                                            <!-- <ColumnDefinition Width="1*" /> -->
+                                            <!-- <ColumnDefinition Width="1*" /> -->
                                         </Grid.ColumnDefinitions>
-                                        <Label TextColor="Black" FontSize="20" FontAttributes="Bold" Grid.Column="0"
+                                        <Label TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Column="0"
                                                Text="{Binding Name}" VerticalTextAlignment="Center"></Label>
-                                        <Label TextColor="Black" FontSize="20" FontAttributes="Bold" Grid.Column="1"
+                                        <Label TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Column="1"
                                                Text="{Binding Class}" VerticalTextAlignment="Center"></Label>
-                                        <Button Text="Update" Grid.Column="2" FontSize="14"
-                                             WidthRequest="75" MaximumHeightRequest="25" ></Button>
-                                        <Button Text="Delete" Grid.Column="3" FontSize="14"
-                                                WidthRequest="75" MaximumHeightRequest="25" ></Button>
+                                        <!-- <Button Text="Update" Grid.Column="2" FontSize="14" -->
+                                        <!--      WidthRequest="75" MaximumHeightRequest="25" ></Button> -->
+                                        <!-- <Button Text="Delete" Grid.Column="3" FontSize="14" -->
+                                        <!--         WidthRequest="75" MaximumHeightRequest="25" ></Button> -->
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                 </ListView>  
                 
-                <Entry MaximumHeightRequest="50" MaximumWidthRequest="250" Text="{Binding Name}" 
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="200" Text="{Binding Name}" 
                        Grid.Row="1" Grid.Column="0" ></Entry> 
-                <Entry MaximumHeightRequest="50" MaximumWidthRequest="250" Text="{Binding Class}"
+                <Entry MaximumHeightRequest="50" MaximumWidthRequest="200" Text="{Binding Class}"
                        Grid.Row="1" Grid.Column="1" ></Entry> 
                 
-                <FlexLayout WidthRequest="400" JustifyContent="SpaceEvenly"
+                <FlexLayout WidthRequest="450" JustifyContent="SpaceEvenly"
                             Grid.Row="1" Grid.Column="2">
-                    <Button MaximumHeightRequest="50" MinimumWidthRequest="110" MaximumWidthRequest="140" Text="Add" Clicked="AddClicked"></Button>
-                    <Button MaximumHeightRequest="50" MinimumWidthRequest="110" MaximumWidthRequest="140" Text="Delete" Clicked="DeleteClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Add" Clicked="AddClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Update" Clicked="UpdateClicked"></Button>
+                    <Button MaximumHeightRequest="50" MinimumWidthRequest="95" MaximumWidthRequest="115" Text="Delete" Clicked="DeleteClicked"></Button>
                 </FlexLayout>
                 
                 <Label Text="Name (Full Name)" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"
@@ -71,7 +72,7 @@
                 
                 <Button MinimumWidthRequest="200" MaximumWidthRequest="250" MaximumHeightRequest="50" 
                         Text="Cancel" Clicked="CancelClicked"
-                        Grid.Row="3" Grid.Column="1"></Button>
+                        Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></Button>
                 
             </Grid>
 

@@ -57,6 +57,14 @@ public class InstructorViewModel : INotifyPropertyChanged
         StudentService.Current.DeleteStudent(SelectedPerson);
         NotifyPropertyChanged(nameof(StudentsList));
     }
+    
+    public void UpdateStudent()
+    {
+        if (SelectedPerson is null) return;
+        
+        StudentService.Current.DeleteStudent(SelectedPerson);
+        NotifyPropertyChanged(nameof(StudentsList));
+    }
 
     // // enrolls existing student to a specific course
     // public void EnrollStudent(Student student, Course course)

@@ -19,5 +19,6 @@ public partial class App : Application
         
         Routing.RegisterRoute("ListViewI", typeof(ListViewInstructor));
         Routing.RegisterRoute("InstructorEditCourse", typeof(InstructorEditCourse));
+        Routing.RegisterRoute("InstructorUpdateStudent", typeof(InstructorUpdateStudent));
     }
 }
